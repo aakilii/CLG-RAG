@@ -1,0 +1,107 @@
+:root {
+  --font-inter: -apple-system, BlinkMacSystemFont, "Inter", "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+  --bg-main: #FFFFFF;
+  --bg-sidebar: #F7F7F8;
+  --bg-card: #FFFFFF;
+  --bg-input: #FFFFFF;
+  --border-hairline: #E2E2E5;
+  --border-focus: #000000;
+  --text-primary: #000000;
+  --text-secondary: #555558;
+  --text-tertiary: #88888D;
+  --accent: #000000;
+  --accent-hover: #222222;
+  --accent-subtle: #F0F0F2;
+  --tag-notes-bg: #EAEAEF;
+  --tag-notes-text: #000000;
+  --tag-ref-bg: #EAEAEF;
+  --tag-ref-text: #333336;
+  --quiz-correct-bg: #F0F0F2;
+  --quiz-correct-border: #000000;
+  --quiz-wrong-bg: #F5F5F7;
+  --quiz-wrong-border: #888888;
+  --tab-active-bg: #000000;
+  --tab-active-text: #FFFFFF;
+  --tab-inactive-bg: transparent;
+  --tab-inactive-text: #555558;
+  --scrollbar-thumb: #D5D5DA;
+  --scrollbar-thumb-hover: #AAAAAE;
+}
+
+[data-theme="dark"] {
+  --bg-main: #000000;
+  --bg-sidebar: #09090B;
+  --bg-card: #121214;
+  --bg-input: #0E0E10;
+  --border-hairline: #222225;
+  --border-focus: #FFFFFF;
+  --text-primary: #FFFFFF;
+  --text-secondary: #9E9EA4;
+  --text-tertiary: #606066;
+  --accent: #FFFFFF;
+  --accent-hover: #E5E5EA;
+  --accent-subtle: #18181B;
+  --tag-notes-bg: #1E1E22;
+  --tag-notes-text: #FFFFFF;
+  --tag-ref-bg: #1A1A1E;
+  --tag-ref-text: #D0D0D5;
+  --quiz-correct-bg: #18181B;
+  --quiz-correct-border: #FFFFFF;
+  --quiz-wrong-bg: #121214;
+  --quiz-wrong-border: #505055;
+  --tab-active-bg: #FFFFFF;
+  --tab-active-text: #000000;
+  --tab-inactive-bg: transparent;
+  --tab-inactive-text: #9E9EA4;
+  --scrollbar-thumb: #28282D;
+  --scrollbar-thumb-hover: #3E3E45;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-inter);
+  color: var(--text-primary);
+  background-color: var(--bg-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  overflow: hidden;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+input, textarea {
+  font-family: inherit;
+  outline: none;
+  border: none;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}

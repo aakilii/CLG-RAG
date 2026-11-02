@@ -1,0 +1,82 @@
+# ==============================================================================
+# Git Ignore Rules for Class Notes RAG System (CLG-RAG)
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Critical Security: Secrets & Environment Files
+# ------------------------------------------------------------------------------
+# Never commit real API keys, Supabase credentials, or private secrets to git.
+.env
+*.env
+backend/.env
+.env*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Allow example / template environment files
+!.env.example
+!backend/.env.example
+
+# ------------------------------------------------------------------------------
+# 2. Python Virtual Environments & Bytecode
+# ------------------------------------------------------------------------------
+.venv/
+venv/
+env/
+ENV/
+backend/.venv/
+backend/.venv/**
+
+# Python cache & compiled bytecode
+__pycache__/
+backend/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ------------------------------------------------------------------------------
+# 3. Node.js & Next.js Builds and Dependencies
+# ------------------------------------------------------------------------------
+node_modules/
+frontend/node_modules/
+frontend/node_modules/**
+
+# Next.js build output
+.next/
+frontend/.next/
+frontend/.next/**
+out/
+build/
+dist/
+
+# NPM / Yarn logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Next.js telemetry and bundle analyzer
+.next/telemetry/
+.next/cache/
+
+# ------------------------------------------------------------------------------
+# 4. Runtime Uploads and Temporary Files
+# ------------------------------------------------------------------------------
+backend/temp_uploads/*
+!backend/temp_uploads/.gitkeep
+
+# ------------------------------------------------------------------------------
+# 5. OS and IDE Artifacts
+# ------------------------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
